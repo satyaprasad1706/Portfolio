@@ -1,4 +1,4 @@
-![Thumbnail](https://github.com/satyaprasad1706/Portfolio/blob/main/assets/thumbnail.png?raw=true)
+![Thumbnail](https://github.com/satyaprasad1706/Portfolio/blob/main/assets/satya_thumbnail.png?raw=true)
 
 # My Portfolio
 
