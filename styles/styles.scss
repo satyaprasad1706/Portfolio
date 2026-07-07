@@ -1,0 +1,1549 @@
+$primary: #1a1a1a;
+$secondary: #232D3F;
+$accents: #03ce2f;
+$text: rgba(255, 255, 255, 0.822);
+$Poppins: 'Poppins', sans-serif;
+$main-width: 20vw;
+$vis-width: 75vw;
+
+//Scrollbar
+
+::-webkit-scrollbar, #main::-webkit-scrollbar-thumb {
+  width: .3vw; /* Set the width of the scrollbar */
+}
+
+::-webkit-scrollbar-track, #main::-webkit-scrollbar-thumb {
+  width: 20px;
+  background: transparent; /* Set the background color of the track */
+}
+
+::-webkit-scrollbar-track:hover,#main::-webkit-scrollbar-thumb {
+  transition: 1s;
+  border-radius: 10px;
+  width: 20px;
+  background: $secondary; /* Set the background color of the track */
+}
+
+::-webkit-scrollbar-thumb:hover,#main::-webkit-scrollbar-thumb {
+  background-color: $accents;
+}
+
+::-webkit-scrollbar-thumb, #main::-webkit-scrollbar-thumb {
+  background-color: $secondary;
+}
+
+.transparent-scrollbar::-webkit-scrollbar-thumb, #main::-webkit-scrollbar-thumb {
+  background-color: transparent !important;
+}
+
+body, html {
+  -webkit-tap-highlight-color: transparent;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+}
+
+link[rel="icon"] {
+  display: block;
+  
+}
+
+body {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(to bottom, #02797f, #043d40);
+  //background: url("../assets/grad.jpeg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100%;
+  margin: 0;
+}
+
+
+#visualizer {
+  position: relative;
+  margin-left: 5vh;
+  min-height: 80vh;
+  display: flex;
+  flex-wrap: wrap;
+  border-radius: 4.375vh;
+  height: 80vh;
+  width: $vis-width;
+  overflow: hidden;
+  background-color: $secondary;
+}
+
+
+.bar {
+  height: 3px;
+  width: 25px;
+  background-color: $text;
+  transition: 0.4s;
+}
+
+#menu-button {
+  display: none !important;
+  position: fixed;
+  right: 1em;
+  top: 1em;
+  z-index: 999; /* Ensure it's above other elements */
+  width: 3em;
+  height: 3em;
+  border-radius: 50%;
+  background-color: $accents; /* Your desired background color */
+ 
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.cross .bar:nth-child(1) {
+  transform: rotate(45deg) translate(6px, 6px);
+}
+
+.cross .bar:nth-child(2) {
+  transform: scale(0);
+}
+
+.cross .bar:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -5px);
+}
+
+/* Add transition for smoother animation */
+.bar {
+  transition: transform 0.3s;
+}
+
+
+@media (max-width: 1024px) {
+
+  //Resume Page styles
+
+  .cv.content.active {
+    height: 100% !important;
+  }
+  .cv.content.active h2{
+    margin-top: 0vh;
+    font-size: 10vw !important;
+  }
+
+  .page-cv{
+    margin-bottom: 3vh;
+    margin-right: 10vw !important;
+  }
+
+  .page-cv h3 {
+    margin-right: 1vw;
+    font-size: 6vw !important; 
+    font-family: $Poppins;
+    width: 100%;
+  }
+
+  .col-left{
+    padding-right: 4vw !important;
+    width: 28% !important;
+  }
+
+  .col-right{
+    padding-left: 2vw !important;
+  }
+
+
+  .timeline::after{
+    left: 32.8% !important;
+  }
+
+  
+
+  .dot {
+    left: 34% !important;
+  }
+
+  .fadeline{
+    margin-right: 1vw;
+    font-size: 3vw !important;
+  }
+  
+  
+  .dischead{
+    font-size: 3vw !important;
+  }
+  
+  .disc {
+    opacity: 0.9;
+    font-size: 2vw !important;
+    margin-top: 0.5vh ;
+    margin-bottom: 5vh;
+  }
+
+  //Skills
+
+  .skill {
+    height: 2vh !important;
+  }
+
+  .line {
+    margin: 0vw 0.4vw 0vw !important;
+    height: 1vh !important;
+  }
+
+  .skillheading{
+    font-size: 2vw !important;
+  }
+  
+  .perc {
+    font-size: 1.6vw !important;
+  }
+
+
+  //Certificates
+
+  .certificate-details h3 {
+    font-size: 2vh !important;
+  }
+
+  .certificate-details{
+    padding: 2vw !important;
+  }
+
+  
+
+
+  //Projects Page Styles
+  .projects.content.active h2{
+    margin-top: 0vh;
+    font-size: 10vw !important;
+  }
+
+  .page-projects{
+    padding-right: 3vw !important;
+  }
+
+  .container h4 {
+    color: $accents;
+    font-size: 5vw !important;
+  }
+
+  .container p {
+    color: $text;
+    font-size: 2vw !important;
+  }
+
+  .cardd{
+    margin-bottom: 6vh !important;
+  }
+
+  .link-buttons{
+    gap: 3vw !important;
+  }
+
+  .link-buttons a{
+    font-size: 3vw !important;
+    border: 0.176vh solid #ffffff;
+  }
+
+  .cardd:hover{
+    box-shadow: none !important;
+  }
+  
+
+
+  //contact Page Styles
+  .contact.content.active h2{
+    margin-top: 0vh;
+    font-size: 10vw !important;
+  }
+
+  .contact.content.active span {
+    color: $accents;
+  }
+
+  .home.content.active{
+    padding-right: 3vw !important;
+    max-height: 100% !important;
+  }
+
+  .home.content.active p{
+    margin-bottom: 10vh !important;
+    max-height: 100% !important;
+  }
+
+  .row-do{
+    margin-bottom: 0vh !important;
+    margin-top: 7vh;
+    font-size:8vw !important;
+    }
+
+  .about.content.active {
+    padding-right: 12vw;
+    max-height: 100% !important;
+  }
+
+  .profile-picture{
+    margin-top: 10px !important;
+    height: 150px !important;
+    width: 150px !important;
+  }
+
+  .name{
+    font-size: 25px !important;
+  }
+
+  .title{
+    font-family: $Poppins;
+    font-size: 14px !important;
+  }
+
+  .mobile{
+    font-family: $Poppins;
+    font-size: 20px !important;
+  }
+  
+  .mobile.active{
+    color: $accents !important;
+  }
+
+  
+  .mobile-bar{
+    margin-top: 60px;
+    justify-content: center;
+    display: flex !important;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .mobile:hover{
+    color: $accents;
+    transition: .3s ease-out;
+  }
+
+
+  .mobile{
+    padding: 0.625vh;
+    margin-bottom: 0.625vh;
+    color: #ffffff;
+    cursor: pointer;
+      align-content: center;
+  }
+
+  body{
+    height: 100%;
+    overflow: hidden;
+    background-color: $primary;
+  }
+
+ .links{
+    gap: 3vw !important;
+    margin-top: 12vh !important;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .links svg {
+    width: 2em !important;
+    height: 2em !important;
+    fill: white;
+    transition: fill 0.5s;
+  }
+
+  #menu-button {
+    align-items: center;
+    flex-direction: column;
+    display: flex !important; /* Show the menu button */
+  }
+
+  #visualizer{
+    flex-wrap: nowrap !important;
+    border-radius: 0px;
+    height: 100%;
+    width: 100%;
+    margin-left: 0vh;
+  }
+
+  #main{
+    
+    border-radius: 0px;
+    display: none !important;
+  }
+
+  #main.active{
+    height: 100%;
+    overflow: hidden;
+    padding-bottom: 30vh !important;
+    padding-top: 20px;
+    width: 275px !important;
+    right: 0;
+    position: absolute;
+    z-index: 2;
+    height: 100%;
+    max-height: 100% !important;
+    margin-top: 00px;
+    order: 4;
+    display: block !important;
+  }
+
+  .download a{
+    margin-top: 5px !important;
+    font-size: 20px !important;
+  }
+
+  .page-about{
+    height: 100% !important;
+  }
+  
+  #side{
+    padding-right: 0.5vw !important;
+    padding-top: 1em !important;
+    width: 100vw !important;
+    height: 100% !important;
+    overflow: hidden;
+    position: relative;
+    border-radius: 0px !important;
+  }
+
+  .tab-sidebar {
+    top: 100vw;
+    width: 100%;
+    margin-left: 0vh !important;
+    border-radius: 0vh !important;
+  }
+  
+  .navbar{
+    z-index: 1 !important;
+    position: fixed !important;
+    right: 1em !important; 
+    bottom: 1em !important;
+    gap: 3vh;
+    height: 17vh !important;
+    border-radius: 50px;
+    width: 3.5em !important;
+    border-color: $accents;
+    border-width: 2px;
+    border-style: solid;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    display: flex !important;
+    background-color: $secondary;
+  }
+
+  .navbar svg{
+    fill: white;
+    z-index: 1 !important;
+    height: 2em !important;
+    width: 2em !important;
+  }
+
+  #left, #right{
+    align-self: center;
+    margin: 0vw;
+    padding: 0vw;
+  }
+
+  .nav {
+    display:none !important;
+    margin-left:0vh !important;
+  }
+
+  .nav.active{
+    width: 8vw;
+    overflow: visible;
+    background-color: $secondary;
+    height: 100%;
+    display:block !important;
+  }
+
+  .home.content  h1{
+    font-size: 10.66vw !important;
+  }
+
+  .home.content  p{
+    font-size: 3vw !important;
+  }
+
+  .about.content.active h2{
+    margin-top: 0vh;
+    padding-left: 0vw !important;
+    font-size: 10vw !important;
+  }
+  
+  .col-intro {
+    justify-content: left !important;
+    padding-left: 0em !important;
+    width: 100vw  ;
+    flex-direction: row !important;
+  }
+
+  .bio{
+    margin-top: 0px;
+    margin-right: 7vw ;
+    width: 50% !important;
+    font-size: 2.66vw !important;
+  }
+
+
+  .details{
+    width: auto;
+    margin-top: 0px !important;
+  }
+
+  .details p{
+    margin-top: 0px;
+    font-size: 2.3vw !important;
+  }
+
+  .card{
+    font-size: 3vw;
+    width: 100%  !important;
+    margin-right: 2vw;
+    margin-top: 3vh;
+  }
+
+  .row-cards{
+    margin-right: 2vw;
+    padding-bottom: 0vh !important;
+    flex-direction: row !important;
+  }
+
+  .arrow {
+    padding: 0vh;
+    margin-bottom: 0vh;
+    cursor: pointer;
+  }
+
+  .navbar:hover svg{
+    fill: $text !important;
+  }
+
+  @media (max-height: 620px){
+    #main.active{
+      overflow: auto;
+    }
+  }
+  
+
+  @media (max-width:768px) {
+
+    //About Page styles
+    .stats embed{
+      width: 100% !important;
+    }
+
+    //Resume Page styles
+    .row {
+      flex-direction: column !important;
+    }
+
+    .cv-col1{
+      width: 100% !important;
+    }
+
+    .timeline::after{
+      left: 30.5% !important;
+    }
+  
+   
+  
+    .dot {
+      left: 31.1% !important;
+    }
+
+    .fadeline{
+      font-size: 5vw !important;
+    }
+    
+    .dischead{
+      font-size: 5vw !important;
+    }
+    
+    .disc {
+      opacity: 0.9;
+      font-size: 3vw !important;
+      margin-top: 0.5vh ;
+      margin-bottom: 5vh;
+    }
+
+     //Skills
+
+    .cv-col2 {
+      width: 80% !important;
+    }
+
+    .skill {
+      height: 2vh !important;
+    }
+  
+    .line {
+      margin: 0vw 0.9vw 0vw !important;
+      height: 1vh !important;
+    }
+
+
+  .skillheading{
+    
+    font-size: 4vw !important;
+    
+  }
+  
+  .perc {
+    font-size: 3.2vw !important;
+  }
+
+    //Certificates
+
+    .certificate-card {
+      width: 100% !important;
+    }
+
+    .page-cv a{
+      width: 95% !important;
+    }
+
+
+    //Projects page stlyes (mobile)
+    .page-projects{
+      padding-right: 7vw !important;
+    }
+
+    .container h4 {
+      color: $accents;
+      font-size: 5vw !important;
+    }
+  
+    .container p {
+      color: $text;
+      font-size: 4vw !important;
+    }
+  
+
+    .mobile-bar{
+      margin-top: 20px;
+     
+    }
+
+    .links{
+      gap: 3vw !important;
+      margin-top: 2vh !important;
+    }
+
+    .card{
+      font-size: 4vw;
+      width: 100%  !important;
+      margin-right: 2vw;
+      margin-top: 3vh;
+    }
+
+    .navbar{
+      display: flex !important;
+    }
+    
+    .row-cards{
+      margin-right: 2vw;
+      padding-bottom: 0vh !important;
+      flex-direction: column !important;
+    }
+
+    
+    
+    .col-intro {
+      justify-content: left !important;
+      padding-left: 0em !important;
+      width: 100%;
+      flex: 1;
+      flex-direction: column !important;
+    }
+
+    .bio{
+      width: 100% !important;
+      font-size: 4vw !important;
+    }
+
+    .about.content.active h2{
+      font-size: 10vw !important;
+    }
+
+    .details{
+      width: auto;
+    }
+
+    .details p{
+      font-size: 4vw !important;
+      line-height: 1.2 !important;
+    }
+  }
+   
+  
+  
+}
+
+p {
+  font-family: $Poppins;
+}
+
+#main {
+  overflow: auto;
+  display: block;
+  max-height: 80vh;
+  width: $main-width;
+  background-color: $secondary;
+  padding: 0vw 0vw 0vw 0vw;
+  margin: 0;
+  background: $secondary;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+#side {
+  height: 95%;
+  flex: 1;
+  background-color: $primary;
+  padding: 1.3125rem 1.5vh 3vh 4.375vh;
+  margin-left: 0vw;
+  margin-right: 0;
+  border-radius: 4.375vh;
+  background: $primary;
+  flex-basis: 30%;
+  color: $text;
+}
+
+.profile-picture {
+  width: 12vw;
+  height: 12vw;
+  background-image: url('../assets/photo.webp');
+  background-size: cover;
+  border-radius: 50%;
+  box-shadow: 0 0 0.625vh rgba(0, 0, 0, 0.5);
+  border: 0.125vh solid #000;
+  margin: 1vw auto 1vw;
+}
+
+h1 {
+  font-size: 16vh;
+  text-align: center;
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  color: $text;
+}
+
+.details p {
+  margin-top: 0px;
+  font-family: $Poppins;
+  font-size: 1vw;
+  line-height: 2.3;
+  color: $text;
+}
+
+/* Rest of your CSS remains the same */
+
+
+
+/* Remove spinners from number input fields */
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  appearance: none;
+  margin: 0;
+}
+
+/* For Firefox, which uses a different style */
+input[type="number"] {
+  -moz-appearance: textfield;
+  appearance: textfield;
+}
+
+
+header{
+  margin-top: 0.5vh;
+  width: 100%;
+  text-align: center;
+}
+
+.name, .title {
+  font-family: 'Poppins', sans-serif;
+  color: $text;
+  margin: 0;
+}
+
+.name {
+  text-align: center;
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  font-size: 2vw;
+  font-weight: bold;
+}
+
+.title {
+  text-align: center;
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  font-size: 1vw;
+  font-weight: normal;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.hometitle {
+  text-align: center;
+  margin: 0rem 0rem 3rem;
+  font-family: 'Poppins', sans-serif;
+  font-size: 1vw;
+  font-weight: normal;
+  color: $accents;
+  opacity: 1;
+}
+.links {
+  display: flex;
+  justify-content: center;
+  gap: 1.6vw;
+  margin-top: 1vw;
+  margin-bottom: 2vw;
+}
+
+.links svg {
+  width: 2em;
+  height: 2em;
+  fill: $text;
+  transition: fill 0.5s;
+}
+
+.links svg:hover {
+  fill: $accents;
+}
+
+.download {
+  text-align: center;
+  margin-top: 3vw;
+}
+
+.download a {
+  margin-top: 1.1vw;
+  margin-bottom: 2vw;
+  display: inline-block;
+  padding: 0.625vh 2.5vh;
+  background-color: transparent;
+  color: $text;
+  text-decoration: none;
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.3vw;
+  border: 0.176vh solid $text;
+  border-radius: 2.5vh;
+  transition: background-color 0.3s;
+  text-decoration: none !important;
+}
+
+.download a:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.tab {
+  padding: 0.625vh;
+  margin-bottom: 0.625vh;
+  color: $text;
+  cursor: pointer;
+}
+
+.tab.active svg {
+  fill: $accents !important;
+}
+
+.tab svg {
+  width: 4vh;
+  height: 4vh;
+  fill: $text;
+  transition: fill 0.5s;
+}
+
+.tab svg:hover {
+  fill: $accents;
+}
+
+.home.content.active {
+  margin: 0rem;
+  padding-top: 0vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  text-align: center;
+}
+
+.home.content.active h1{
+  margin-right: 2.3vh;
+  font-size: 4vw;
+}
+
+.content {
+  display: none;
+}
+
+.active {
+  display: block;
+}
+
+.tab-sidebar {
+  gap: 0.7vw;
+  width: 4vw;
+  margin-left: 1vh;
+  padding-top: 1.2vh;
+  padding-bottom: 0.7vh;
+  border-radius: 6.25vh;
+  background-color: #232D3F;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.nav {
+  top: 0;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  margin-left: 2vh;
+  min-height: 80vh;
+  height: 80vh;
+  overflow: hidden;
+  background-color: transparent;
+}
+
+.content {
+  display: none;
+}
+
+.content.active {
+  display: block;
+}
+
+@keyframes rollUp {
+  from {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateY(-100%);
+  }
+}
+
+@keyframes rollDown {
+  from {
+    opacity: 0;
+    //transform: translateY(-100%);
+  }
+  to {
+    opacity: 1;
+    //transform: translateY(0);
+  }
+}
+
+.roll-up {
+  animation: rollUp 0.5s ease-in-out forwards;
+}
+
+.roll-down {
+  animation: rollDown 0.5s ease-in-out forwards;
+}
+
+
+.about.content.active {
+  margin-right: 0px; 
+  max-height: 76vh;
+  width:fit-content;
+  overflow-y: auto;
+  overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+
+.about.content.active .col-intro {
+  font-family: $Poppins;
+  color: $text;
+  display: flex;
+  justify-content: space-between;
+  flex: 1;
+  flex-direction: row;
+  padding: 1vw;
+  background-color: transparent;
+  border-radius: 10px;
+}
+
+
+.details {
+  font-size: 1vw;
+  font-family: $Poppins;
+  line-height: 1.6;
+  margin-top: 1em;
+  display: flex;
+  margin-right: 3vw;
+  flex-direction: column;
+}
+
+.bio{
+  width: 50%;
+  display: flex;
+  font-size: 1.1vw;
+}
+
+.details span{
+  font-weight: bold;
+  color: $accents;
+}
+
+a.email-link {
+  color: $text; /* Change the color to your preference */
+  text-decoration: none; /* Remove default underline */
+  font-weight: bold; /* Optionally, make the text bold */
+}
+
+/* Apply hover effect */
+a.email-link:hover {
+  text-decoration: underline; /* Underline on hover */
+  color: $text; /* Change color on hover to your preference */
+}
+a:-webkit-any-link {
+  color: $text;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+
+.about.content.active.page-about.col-intro.details p{
+  font-size: 1.1vw;
+}
+
+.spec {
+  margin-bottom: 1vw;
+}
+
+.about.content.active h2 {
+  padding-left: 1vw;
+  font-family: $Poppins;
+  display: flex;
+  color: $text;
+  font-size: 2.5vw;
+  margin-bottom: 0vw;
+}
+
+.about.content.active span {
+  color: $accents;
+}
+
+.page-about{
+  
+  height: 70vh;
+}
+
+.stats {
+  width: 100%;
+  gap: 5vw;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: left;
+  margin-left: 1vw;
+}
+
+.stats embed{
+  width: 40%;
+}
+
+.about.content.active.page-about{
+  flex-direction: column;
+  display: flex;
+  align-items: center; 
+}
+
+.mobile-bar{
+  display: none;
+}
+
+
+.row-do{
+  margin-bottom: 3vh;
+  padding-left: 1vw;
+  font-weight: bold;
+  font-family: $Poppins;
+  color: $text;
+  font-size: 1.7vw;
+}
+
+.just-do{
+  color: $accents;
+}
+
+.cards{
+  font-family: $Poppins;
+  flex-direction: column;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-bottom: 20px; /* Adjust as needed */
+}
+
+.row-cards{
+  gap: 1vw;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-bottom: 2vh; /* Adjust as needed */
+  background-color: #f0f0f000; /* Optional: Add background color for clarity */
+  padding: 0px 5px 20px 1vw; /* Optional: Add padding for clarity */
+  box-sizing: border-box; /* Optional: Include padding in width calculation */
+}
+
+.card{
+  width: 50%;
+  flex-direction: column;
+  display: flex;
+}
+
+.card h3{
+  margin: 0.4vw;
+}
+
+.card p{
+  margin: .3vw;
+}
+
+.row-cards svg {
+  padding-left: .5vw;
+  width: 3em;
+  height: 3em;
+  fill: $accents;
+  transition: fill 0.5s;
+}
+
+.navbar{
+  width: 4vw;
+  margin-left: 1vh;
+  z-index: 1;
+  position: absolute;
+  bottom: 10vh;
+  right: 8.5vw;
+  gap: 3vh;
+  height: 17vh;
+  border-radius: 50px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  background-color: $secondary;
+}
+
+.navbar svg{
+  fill: white;
+  z-index: 1 ;
+  height: 2vw ;
+  width: 2vw ;
+}
+
+.navbar svg:hover {
+  fill: $accents;
+  transition: 0.3s;
+}
+
+//Resume Page styles
+
+.cv.content.active{
+  height: 76vh;
+  overflow: auto;
+}
+.cv.content.active h2{
+  padding-left: 1vw;
+  font-family: $Poppins;
+  display: flex;
+  color: $text;
+  font-size: 2.5vw;
+  margin-bottom: 0vw;
+}
+
+.page-cv{
+  margin-right: 2vw;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  overflow: auto;
+  padding-left: 1vw;
+}
+
+.page-cv span{
+  color: $accents;
+}
+
+.row{
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+
+.cv-col1{
+  overflow: auto;
+  overflow-x: hidden;
+  width: 57%;
+}
+
+.cv-col2{
+  width: 40%;
+}
+
+.page-cv h3 {
+  font-size: 1.3vw;
+  font-family: $Poppins;
+  width: 100%;
+}
+
+
+.timeline {
+  display: flex;
+  position: relative;
+}
+
+
+.timeline::after{
+  content: '';
+  position: absolute;
+  width: 0.2vw;
+  background-color: $secondary;
+  top: 0;
+  bottom: 0;
+  left: 27%;
+  margin-left: 0.5vw;
+}
+
+
+
+.dot {
+  content: '';
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  background-color: $accents;
+  border-radius: 50%;
+  top: 10%;
+  left: 29.2%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  opacity: .8;
+}
+
+
+
+.col-left,
+.col-right {
+  position: relative;
+}
+
+.col-left{
+  width: 24%;
+  text-align: right;
+  padding-right: 1vw;
+}
+
+.col-right{
+  flex: 1;
+  text-align: left;
+  padding-left: 2vw;
+  padding-right: 4vw;
+}
+
+
+.col-left::after {
+  left: 0;
+}
+
+.col-right::after {
+  right: 0;
+}
+
+.fadeline{
+  font-family: $Poppins;
+  margin-top: 1vh;
+  margin-bottom: 0vh;
+  opacity: .6;
+}
+
+.company{
+  font-weight: bold;
+  font-family: $Poppins;
+  margin-top: 0vh;
+  margin-bottom: 0vh;
+  opacity: .6;
+}
+
+.timeframe{
+  font-family: $Poppins;
+  margin-bottom: 0vh;
+  margin-top: 0vh;
+  opacity: .6;
+}
+
+.dischead{
+  font-size: 1.3vw;
+  font-family: $Poppins;
+}
+
+.disc {
+  opacity: 0.9;
+  font-size: 0.9vw;
+  margin-top: 0.5vh ;
+  margin-bottom: 5vh;
+}
+
+//SKills
+
+.skills{
+  display: flex;
+  flex-direction: column;
+}
+
+.entry {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+
+.skill {
+  display: flex;
+  height: 1vh;
+  align-items: center;
+  margin-bottom: 3vh;
+  width: 98%;
+  background-color: transparent;
+  border: 1px solid $accents;
+  border-radius: 10px;
+}
+
+.line {
+  margin: 0vw 0.1vw 0vw;
+  border-radius: 7px;
+  height: .5vh;
+  background-color: #4caf50;
+  text-align: center;
+  vertical-align: middle;
+  width: 0;
+  transition: width 0.5s ease;
+}
+
+
+.skillheading{
+  width: 100%;
+  font-size: 1vw;
+  font-family: $Poppins;
+}
+
+.perc {
+  font-size: 0.8vw;
+  font-family: $Poppins;
+  opacity: 0.6;
+}
+
+.tech {
+  padding: 0vh 0vh 0vh;
+  margin: 0vh;
+}
+
+.badge {
+  font-family: $Poppins;
+  display: inline-block;
+  padding: 5px 10px;
+  margin: 5px;
+  font-size: 14px;
+  font-weight: bold;
+  color: #fff;
+  background-color: #03ce2f77; /* Badge background color */
+  border-radius: 2px;
+}
+
+//Certificates
+
+.row.cert {
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+}
+
+.certificate-card {
+  margin-right: 1vw;
+  height: 30vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  margin-bottom: 2vh;
+  background-color: $secondary;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.certificate-image {
+  height: 100%;
+  width: 40%;
+}
+
+.certificate-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.certificate-details {
+  width: 60%;
+  height: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 1vw;
+}
+
+.certificate-details h3 {
+  font-size: 2.5vh;
+  margin-top: 0;
+  margin-bottom: 5px;
+}
+
+.certificate-details p {
+  margin: 0;
+  font-size: 14px;
+  color: $text;
+}
+
+.page-cv a {
+  width: 50%;
+  flex-direction: row;
+  display: flex;
+  text-decoration: none !important;
+}
+
+
+
+
+
+
+//Projects Page Styles
+
+.projects.content.active {
+  max-height: 100%;
+  overflow-y: auto;
+  overflow-x: hidden;
+  font-family: $Poppins;
+  color: $text;
+  margin-bottom: 0vw;
+
+  margin-right: 0px;
+  width:fit-content;
+  overflow-y: auto;
+  overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+
+.projects.content.active h2{
+  padding-left: 1vw;
+  font-family: $Poppins;
+  display: flex;
+  color: $text;
+  font-size: 2.5vw;
+  margin-bottom: 0vw;
+}
+
+.page-projects{
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  margin-top: 4vh;
+  padding-right: 1vw;
+}
+
+
+.cardd {
+  flex: 1;
+  margin: 0 1vw 1vw 0;
+  background-color: $secondary;
+  /* Add shadows to create the "card" effect */
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+}
+
+.cardd img{
+  flex: 1;
+}
+
+/* On mouse-over, add a deeper shadow */
+.cardd:hover {
+  box-shadow: 0 8px 16px 0 $accents;
+}
+
+/* Add some padding inside the card container */
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  position: relative;
+  padding: 2px 16px;
+}
+
+.container h4 {
+  margin: 0vw 0vw 0vw 0vw;
+  color: $accents;
+  font-size: 2vw;
+}
+
+
+.container p {
+  color: $text;
+  font-size: 1vw;
+}
+
+.link-buttons{
+  flex-grow: 1;
+  height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  flex: 1;
+  width: 100%;
+  vertical-align: bottom;
+  justify-items: center;
+  justify-content: space-between;
+}
+
+.link-buttons a{
+  margin-top: 1.1vw;
+  margin-bottom: 2vw;
+  display: inline-block;
+  padding: 0.625vh 2.5vh;
+  background-color: $primary;
+  color: #ffffff;
+  text-decoration: none;
+  font-family: 'Poppins', sans-serif;
+  font-size: .9vw;
+  border: 0.176vh solid #ffffff;
+  border-radius: 0vh;
+  transition: background-color 0.3s;
+  text-decoration: none !important;
+}
+
+
+//contact Page Styles
+.contact.content.active h2{
+  padding-left: 1vw;
+  font-family: $Poppins;
+  display: flex;
+  color: $text;
+  font-size: 2.5vw;
+  margin-bottom: 0vw;
+}
+
+.contact.content.active span {
+  color: $accents;
+}
