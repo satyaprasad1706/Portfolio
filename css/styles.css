@@ -488,7 +488,7 @@ body {
     margin-top: 20px;
   }
   .links {
-    gap: 3vw !important;
+    gap: 1.5vw 2vw !important;
     margin-top: 2vh !important;
   }
   .card {
@@ -643,20 +643,44 @@ header {
 .links {
   display: flex;
   justify-content: center;
-  gap: 1.6vw;
+  flex-wrap: wrap;
+  gap: 0.6vw 0.8vw;
   margin-top: 1vw;
   margin-bottom: 2vw;
+  padding: 0 0.5vw;
 }
 
-.links svg {
-  width: 2em;
-  height: 2em;
+.links svg, .links i {
+  width: 1.3em;
+  height: 1.3em;
+  font-size: 1.3em;
   fill: rgba(255, 255, 255, 0.822);
-  transition: fill 0.5s;
+  color: rgba(255, 255, 255, 0.822);
+  transition: fill 0.3s, color 0.3s, transform 0.3s;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.links svg:hover {
+.links svg:hover, .links i:hover {
   fill: #03ce2f;
+  color: #03ce2f;
+  transform: scale(1.18);
+}
+
+.badge {
+  display: inline-block;
+  padding: 6px 12px;
+  border-radius: 6px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: #fff;
+  transition: transform 0.2s ease, filter 0.2s ease;
+}
+
+.badge:hover {
+  transform: translateY(-2px);
+  filter: brightness(1.25);
 }
 
 .download {
